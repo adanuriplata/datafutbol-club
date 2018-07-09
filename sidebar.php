@@ -1,6 +1,10 @@
    <aside class="aside">
       <div class="sponsor">
-        <img src="https://placehold.it/300x250/56aace/fff" alt="">
+        <?php if(get_option('datafutbol_300_250_1')) :?>
+          <?php echo get_option('datafutbol_300_250_1'); ?>
+        <?php else : ?>
+          <img src="https://placehold.it/300x250/56aace/fff" alt="">
+        <?php endif ?>
       </div>
 
       <?php query_posts('category_name=tips-y-tutoriales&posts_per_page=5' );?>
@@ -41,6 +45,10 @@
         </form>
       </div>
       <div class="sponsor">
-        <img src="https://placehold.it/300x250/56aace/fff" alt="">
+        <?php if(get_option('datafutbol_300_250_2')) :?>
+          <?php echo get_option('datafutbol_300_250_2'); ?>
+        <?php else : ?>
+          <img src="https://placehold.it/300x250/56aace/fff" alt="">
+        <?php endif ?>
       </div>
     </aside>

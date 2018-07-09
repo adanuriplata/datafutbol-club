@@ -1,4 +1,7 @@
 <?php
+//
+require get_template_directory() . '/inc/sponsors.php';
+
 //Load Styles
 function datafutbol_load_styles() {
   wp_register_style('style', get_stylesheet_uri());

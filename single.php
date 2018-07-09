@@ -24,8 +24,12 @@
   <?php endwhile ?>
       <div class="single-post-footer">
         <div class="sponsor-lb">
-          <img src="https://download-twitter-videos.com/es/img/728.jpg" alt="">
-        </div>
+          <?php if(get_option('datafutbol_728_90')) :?>
+            <?php echo get_option('datafutbol_728_90'); ?>
+          <?php else : ?>
+            <img src="https://download-twitter-videos.com/es/img/728.jpg" alt="">
+          <?php endif ?>
+    </div>
         <div class="author">
           <div class="author__info">
             <figure class="author__info__avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 52 ); ?></figure>
@@ -49,7 +53,11 @@
       </div>
       <section class="grid-post-ads">
         <article class="grid-post-ads__add">
-          <img src="https://placehold.it/300x250/56aace/fff" alt="">
+          <?php if(get_option('datafutbol_300_250_1')) :?>
+            <?php echo get_option('datafutbol_300_250_1'); ?>
+          <?php else : ?>
+            <img src="https://placehold.it/300x250/56aace/fff" alt="">
+          <?php endif ?>
         </article>
         
         <?php 
@@ -82,9 +90,12 @@
         </article>
         <?php endif; ?>
 
-
         <article class="grid-post-ads__add">
-          <img src="https://placehold.it/300x250/56aace/fff" alt="">
+          <?php if(get_option('datafutbol_300_250_2')) :?>
+            <?php echo get_option('datafutbol_300_250_2'); ?>
+          <?php else : ?>
+            <img src="https://placehold.it/300x250/56aace/fff" alt="">
+          <?php endif ?>
         </article>
       </section>
     </main>

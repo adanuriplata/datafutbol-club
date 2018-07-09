@@ -36,7 +36,11 @@
     <div class="paginacion"><?php echo paginate_links(); ?></div>
     <?php get_sidebar(); ?>
     <div class="sponsor-lb">
-      <img src="https://download-twitter-videos.com/es/img/728.jpg" alt="">
+      <?php if(get_option('datafutbol_728_90')) :?>
+        <?php echo get_option('datafutbol_728_90'); ?>
+        <?php else : ?>
+        <img src="https://download-twitter-videos.com/es/img/728.jpg" alt="">
+      <?php endif ?>
     </div>
   </main>
     <?php get_footer(); ?>
